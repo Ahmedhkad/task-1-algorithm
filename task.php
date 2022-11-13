@@ -8,7 +8,8 @@ $numbers = array(1, 2, 3, 15, 8, 20, 11, 2, 626, 9, 1);
 $length = count($numbers);
 for ($i = 0; $i < $length; $i++) {
     if (strpos($numbers[$i], "2") !== false) {      //search for repeated 2
-        echo ("\n");
+                                                    // or use: preg_match("/2/", $numbers[$i])
+        $length++;
         for ($j = $length - 1; $j > $i; $j--) {     //loop to rearrange 
             $numbers[$j] = $numbers[$j - 1];     //change the key of each number
         }
